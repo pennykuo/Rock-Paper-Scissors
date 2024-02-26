@@ -1,5 +1,5 @@
 // Your JavaScript goes here!
-let s='';
+while(1){
 let ans=parseInt(prompt("輸入1(剪刀),2(石頭),3(布)："))//輸入數字
 let a=Math.floor(Math.random()*3+1);//*(max - min + 1) + min)
 console.log(a);
@@ -29,4 +29,5 @@ if(ans==1){
     }
 }else{
     console.log("輸入錯誤喔!");
+}
 }
