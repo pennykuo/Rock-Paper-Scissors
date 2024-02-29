@@ -16,6 +16,7 @@
 
     const scorePlayerElement=document.querySelector("#scorePlayer");
     const scoreComputerElement=document.querySelector("#scoreComputer");
+    const winRule=document.querySelector(".win_rule");
     // console.log(scorePlayerElement);
     // scorePlayerElement.textContent = "Player：";
     
@@ -26,41 +27,41 @@ function rand_computer(){
 function contest(weap,rand){
     if (weap == 1) {
             if (rand == 1) {
-                console.log("It's a tie!")
+                winRule.textContent="It's a tie!";
                 whoWin=0;
             } else if (rand == 2) {
-                console.log("You Lose!  Water beats Fire")
+                winRule.textContent="You Lose!  Water beats Fire";
                 scoreComputer++;
                 whoWin=2;
             } else if (rand == 3) {
-                console.log("You Win! Fire beats Green")
+                winRule.textContent="You Win! Fire beats Green";
                 scorePlayer++;
                 whoWin=1;
             }
         } else if (weap == 2) {
             if (rand == 1) {
-                console.log("You Win! Water beats Fire")
+                winRule.textContent="You Win! Water beats Fire";
                 scorePlayer++;
                 whoWin=1;
             } else if (rand == 2) {
-                console.log("It's a tie!")
+                winRule.textContent="It's a tie!";
                 whoWin=0;
             } else if (rand == 3) {
-                console.log("You Lose! Green beats Water")
+                winRule.textContent="You Lose! Green beats Water";
                 scoreComputer++;
                 whoWin=2;
             }
         } else if (weap == 3) {
             if (rand == 1) {
-                console.log("You Lose! Fire beats Green")
+                winRule.textContent="You Lose! Fire beats Green";
                 scoreComputer++;
                 whoWin=2;
             } else if (rand == 2) {
-                console.log("You Win! Green beats Water")
+                winRule.textContent="You Win! Green beats Water";
                 scorePlayer++;
                 whoWin=1;
             } else if (rand == 3) {
-                console.log("It's a tie!")
+                winRule.textContent="It's a tie!";
                 whoWin=0;
             }
         }
@@ -75,10 +76,20 @@ function currentScore(scorePlayer,scoreComputer,whoWin){
     
     if (scoreComputer==5){
         alert("YOU LOSE!");
-    }else if(scorePlayer==5){
+        resetGame();
+    }else if(scorePlayer==5){       
         alert("YOU WIN!!");
+        resetGame();
         
+    }
 }
+function resetGame() {
+    scorePlayer = 0;
+    scoreComputer = 0;
+    scorePlayerElement.textContent = "Player：0";
+    scoreComputerElement.textContent = "Computer：0";
+    whoWin = 0;
+    winRule.textContent = "First to score 5 points wins the game";
 }
 function get1() {
     rand =rand_computer();
