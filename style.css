@@ -12,7 +12,7 @@ body{
     align-items: center;
     font-size: 40px;
     /* font-family: Brush Script MT, Brush Script Std, cursive; */
-        font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: FreeMono, monospace;
 }
 .main{
     display: flex;
@@ -32,11 +32,12 @@ body{
 }
 .rule{
     font-size: 30px;
-    font-family: Comic Sans MS, Comic Sans, cursive;
-
+    /* font-family: Comic Sans MS, Comic Sans, cursive; */
+    font-family: FreeMono, monospace;
 }
 .win_rule,.footer,.score_box{
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    /* font-family: Comic Sans MS, Comic Sans, cursive; */
+    font-family: FreeMono, monospace;
 }
 .score_box{
     display: flex;
