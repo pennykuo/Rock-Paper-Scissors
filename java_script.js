@@ -20,14 +20,17 @@
     btn_water.addEventListener('mouseout', () => {
         btn_water.blur();
     });
-    const btn_green =document.querySelector(".btn_green");
-    btn_green.addEventListener('click', get3);
-    btn_green.addEventListener('mouseover', () => {
-        btn_green.focus();
+    const btn_grass =document.querySelector(".btn_grass");
+    btn_grass.addEventListener('click', get3);
+    btn_grass.addEventListener('mouseover', () => {
+        btn_grass.focus();
     });
-    btn_green.addEventListener('mouseout', () => {
-        btn_green.blur();
+    btn_grass.addEventListener('mouseout', () => {
+        btn_grass.blur();
     });
+    const signPlayer=document.querySelector("#player");
+    const signComputer=document.querySelector("#computer");
+
     const scorePlayerElement=document.querySelector("#scorePlayer");
     const scoreComputerElement=document.querySelector("#scoreComputer");
     const winRule=document.querySelector(".win_rule");
@@ -46,6 +49,7 @@ function rand_computer(){
 }
 function contest(weap,rand){
     if (weap == 1) {
+        // Signplayer.innerHTML ='<img src="./image/fire.jpg" alt="Player Image">';
             if (rand == 1) {
                 winRule.textContent="It's a tie!";
                 whoWin=0;
@@ -54,7 +58,7 @@ function contest(weap,rand){
                 scoreComputer++;
                 whoWin=2;
             } else if (rand == 3) {
-                winRule.textContent="You Win! Fire beats Green";
+                winRule.textContent="You Win! Fire beats Grass";
                 scorePlayer++;
                 whoWin=1;
             }
@@ -67,17 +71,17 @@ function contest(weap,rand){
                 winRule.textContent="It's a tie!";
                 whoWin=0;
             } else if (rand == 3) {
-                winRule.textContent="You Lose! Green beats Water";
+                winRule.textContent="You Lose! Grass beats Water";
                 scoreComputer++;
                 whoWin=2;
             }
         } else if (weap == 3) {
             if (rand == 1) {
-                winRule.textContent="You Lose! Fire beats Green";
+                winRule.textContent="You Lose! Fire beats Grass";
                 scoreComputer++;
                 whoWin=2;
             } else if (rand == 2) {
-                winRule.textContent="You Win! Green beats Water";
+                winRule.textContent="You Win! Grass beats Water";
                 scorePlayer++;
                 whoWin=1;
             } else if (rand == 3) {
