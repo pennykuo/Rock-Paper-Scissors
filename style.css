@@ -13,11 +13,11 @@ body{
 .header{
     display: flex;
     flex-direction: column;
-    height: 100px;
+    height: 80px;
     background-color:lightsalmon;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 40px;
     /* font-family: Brush Script MT, Brush Script Std, cursive; */
         font-family: Comic Sans MS, Comic Sans, cursive;
 }
