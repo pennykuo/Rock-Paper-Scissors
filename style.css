@@ -3,13 +3,13 @@ body{
     flex-direction: column;
     
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .header {
         height: 40px;
         font-size: 20px;
     }
-    /* 添加其他样式 */
-}
+    /* 添加其他样式 
+} */
 .header{
     display: flex;
     flex-direction: column;
@@ -69,13 +69,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:50px;
+    gap:40px;
 }
 #water,
 #green,
 #fire{
     height: 100px;
     width: 100px;
+    display: flex;
+    flex-shrink: 5;
+    border:3px solid rgba(240, 147, 113, 0.464) ;
+    border-radius: 15px;
+    
 }
 .footer{
     display: flex;
