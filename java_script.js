@@ -49,42 +49,56 @@ function rand_computer(){
 }
 function contest(weap,rand){
     if (weap == 1) {
-        // Signplayer.innerHTML ='<img src="./image/fire.jpg" alt="Player Image">';
+        signPlayer.innerHTML ='<img src="./image/fire.jpg" alt="Player Image" height=50px width=50px>';
             if (rand == 1) {
+                signComputer.innerHTML ='<img src="./image/fire.jpg" alt="Player Image" height=50px width=50px>';
                 winRule.textContent="It's a tie!";
                 whoWin=0;
             } else if (rand == 2) {
+                signComputer.innerHTML ='<img src="./image/water.jpg" alt="Player Image" height=50px width=50px>';
                 winRule.textContent="You Lose!  Water beats Fire";
                 scoreComputer++;
                 whoWin=2;
             } else if (rand == 3) {
+                signComputer.innerHTML ='<img src="./image/green.jpg" alt="Player Image" height=50px width=50px>';
                 winRule.textContent="You Win! Fire beats Grass";
                 scorePlayer++;
                 whoWin=1;
             }
         } else if (weap == 2) {
+            signPlayer.innerHTML ='<img src="./image/water.jpg" alt="Player Image" height=50px width=50px>';
+
             if (rand == 1) {
+                signComputer.innerHTML ='<img src="./image/fire.jpg" alt="Player Image" height=50px width=50px>';
                 winRule.textContent="You Win! Water beats Fire";
                 scorePlayer++;
                 whoWin=1;
             } else if (rand == 2) {
+                signComputer.innerHTML ='<img src="./image/water.jpg" alt="Player Image" height=50px width=50px>';
                 winRule.textContent="It's a tie!";
                 whoWin=0;
             } else if (rand == 3) {
+                signComputer.innerHTML ='<img src="./image/green.jpg" alt="Player Image" height=50px width=50px>';
                 winRule.textContent="You Lose! Grass beats Water";
                 scoreComputer++;
                 whoWin=2;
             }
         } else if (weap == 3) {
+            signPlayer.innerHTML ='<img src="./image/green.jpg" alt="Player Image" height=50px width=50px>';
+
             if (rand == 1) {
+                signComputer.innerHTML ='<img src="./image/fire.jpg" alt="Player Image" height=50px width=50px>';
                 winRule.textContent="You Lose! Fire beats Grass";
                 scoreComputer++;
                 whoWin=2;
             } else if (rand == 2) {
+                signComputer.innerHTML ='<img src="./image/water.jpg" alt="Player Image" height=50px width=50px>';
                 winRule.textContent="You Win! Grass beats Water";
                 scorePlayer++;
                 whoWin=1;
             } else if (rand == 3) {
+                signComputer.innerHTML ='<img src="./image/green.jpg" alt="Player Image" height=50px width=50px>';
+
                 winRule.textContent="It's a tie!";
                 whoWin=0;
             }
