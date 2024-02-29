@@ -5,22 +5,42 @@
     let scoreComputer=0;
     let whoWin=0;
     const btn_fire =document.querySelector(".btn_fire");
-    // console.log(document.querySelector(".btn_fire"));
     btn_fire.addEventListener('click', get1);
-
+    btn_fire.addEventListener('mouseover', () => {
+        btn_fire.focus();
+    });
+    btn_fire.addEventListener('mouseout', () => {
+        btn_fire.blur();
+    });
     const btn_water =document.querySelector(".btn_water");
     btn_water.addEventListener('click', get2);
-
+    btn_water.addEventListener('mouseover', () => {
+        btn_water.focus();
+    });
+    btn_water.addEventListener('mouseout', () => {
+        btn_water.blur();
+    });
     const btn_green =document.querySelector(".btn_green");
     btn_green.addEventListener('click', get3);
-
+    btn_green.addEventListener('mouseover', () => {
+        btn_green.focus();
+    });
+    btn_green.addEventListener('mouseout', () => {
+        btn_green.blur();
+    });
     const scorePlayerElement=document.querySelector("#scorePlayer");
     const scoreComputerElement=document.querySelector("#scoreComputer");
     const winRule=document.querySelector(".win_rule");
-    // console.log(scorePlayerElement);
-    // scorePlayerElement.textContent = "Player：";
-    
-    
+    let infoModalLose=document.querySelector("#infoModalLose");
+    let close2=document.querySelector("#close2");
+    close2.addEventListener("click", function(){
+        infoModalLose.close();
+    })
+    let infoModalWin=document.querySelector("#infoModalWin");
+    let close1=document.querySelector("#close1");
+    close1.addEventListener("click", function(){
+        infoModalWin.close();
+    })
 function rand_computer(){
     return Math.floor(Math.random() * 3 + 1);//*(max - min + 1) + min)
 }
@@ -73,14 +93,13 @@ function currentScore(scorePlayer,scoreComputer,whoWin){
     }else if (whoWin==2){
         scoreComputerElement.textContent = "Computer："+scoreComputer;
     }
-    
     if (scoreComputer==5){
-        alert("YOU LOSE!");
-        resetGame();
-    }else if(scorePlayer==5){       
-        alert("YOU WIN!!");
+        infoModalLose.showModal();
         resetGame();
         
+    }else if(scorePlayer==5){  
+        infoModalWin.showModal();     
+        resetGame();
     }
 }
 function resetGame() {
@@ -94,9 +113,6 @@ function resetGame() {
 function get1() {
     rand =rand_computer();
     weap=1;
-    console.log(weap);
-    console.log(rand);
-    /*比賽-----------------------*/
     contest(weap,rand);
     currentScore(scorePlayer,scoreComputer,whoWin)
     
