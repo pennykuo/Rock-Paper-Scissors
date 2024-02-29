@@ -1,6 +1,13 @@
 body{
     display: flex;
     flex-direction: column;
+    
+}
+@media only screen and (max-width: 600px) {
+    .header {
+        font-size: 20px;
+    }
+    /* 添加其他样式 */
 }
 .header{
     display: flex;
@@ -10,8 +17,8 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 60px;
-    /* font-family: Brush Script MT, Brush Script Std, cursive; */
-        font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+        /* font-family: Comic Sans MS, Comic Sans, cursive; */
 }
 .main{
     display: flex;
@@ -21,6 +28,7 @@ body{
     flex-grow: 1;
     
 }
+
 .rule_title{
     display: flex;
     flex-direction: column;
