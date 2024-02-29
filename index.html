@@ -7,7 +7,6 @@
   <title>Rock Paper Scissors.</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- <script src="java_script.js"></script> -->
 </head>
 <body>
     <div class="header">
@@ -21,24 +20,33 @@
         <div class="score_box">
           <div class="sign">
             <p id="player">❔</p>
-            <p id="score_player">Player：0</p> 
+            <p id="scorePlayer">Player：0</p> 
           </div>
           <div class="sign"> 
             <p id="computer">❔</p>
-            <p id="score_computer">Computer：0</p> 
+            <p id="scoreComputer">Computer：0</p> 
           </div>
         </div>
         <div class="weapon">
-          <img id="fire"src="./image/fire.jpg">
-          
-          <img id="water" src="./image/water.jpg">
+          <button class="btn_fire">
+            <img id="fire"src="./image/fire.jpg">
+          </button>
 
+          <button class="btn_water">
+          <img id="water" src="./image/water.jpg">
+          </button>
+
+          <button class="btn_green">
           <img id="green" src="./image/green.jpg">
+        </button>
+        
         </div>
         
     </div>
     <div class ="footer">
       Writer:Penny_Kuo
     </div>
+    <script src="java_script.js"></script>  
 </body>
+
 </html>

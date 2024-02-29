@@ -3,23 +3,6 @@ body{
     flex-direction: column;
     
 }
-@media only screen and (max-width: 400px) {
-    .header {
-        height: 40px;
-        font-size: 20px;
-    }
-    #water,
-    #green,
-    #fire{
-    height: 80px;
-    width: 80px;
-    display: flex;
-    border:3px solid rgba(240, 147, 113, 0.464) ;
-    border-radius: 15px;
-    
-}
-    /* 添加其他样式  */
-}
 .header{
     display: flex;
     flex-direction: column;
@@ -81,6 +64,13 @@ body{
     justify-content: center;
     align-items: center;
     gap:40px;
+    
+}
+.btn_fire,.btn_water,.btn_green{
+    background-color: rgb(248, 197, 176);
+    border:0px solid ; 
+    padding: 0;
+    margin: 0;
 }
 #water,
 #green,
@@ -90,6 +80,9 @@ body{
     display: flex;
     border:3px solid rgba(240, 147, 113, 0.464) ;
     border-radius: 15px;
+    padding: 0;
+    margin: 0;
+
     
 }
 .footer{
